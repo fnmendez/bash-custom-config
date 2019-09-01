@@ -21,7 +21,8 @@ alias reyarn="
   echo 'Removing node_modules folder...'; rm -rf node_modules;
   echo 'Installing dependencies with yarn...'; yarn install"
 alias ndev="npm run dev"
-alias yadd="yarn add"
+alias y="yarn"
+alias yad="yarn add"
 alias yadev="yarn add -D"
 
 

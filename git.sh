@@ -76,6 +76,7 @@ alias gps="git push"
 alias gpl="git pull --rebase"
 alias gl="git log --oneline"
 alias gst="git stash"
+alias gstp="git stash pop"
 alias gmr="git merge"
 alias grp="git remote prune origin"
 alias gor=git_open_remote
