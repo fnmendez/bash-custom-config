@@ -34,3 +34,9 @@ cd ../../../;
 cd node_modules/react-native/third-party/glog-0.3.5/ &&
 ../../scripts/ios-configure-glog.sh &&
 cd ../../../../"
+
+alias dc="docker-compose"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
+
+alias ngrok="~/.ngrok2/ngrok"
