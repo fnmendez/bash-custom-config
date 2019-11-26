@@ -6,9 +6,6 @@ alias sbp="source ~/.bash_profile"
 # Ruby
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Direnv
-eval "$(direnv hook bash)"
-
 # Thefuck
 eval $(thefuck --alias)
 
@@ -28,3 +25,4 @@ source $folder/git.sh
 source $folder/git-prompt.sh
 source $folder/git-completion.sh
 source $folder/git-completion-aliases.sh
+source $folder/snippets.sh
