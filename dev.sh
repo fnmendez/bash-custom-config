@@ -1,4 +1,5 @@
 alias c="clear"
+alias python="python2"
 alias py="python3"
 alias ip="
 ifconfig |
@@ -25,7 +26,6 @@ alias y="yarn"
 alias yad="yarn add"
 alias yadev="yarn add -D"
 
-
 alias _emulator="$ANDROID_SDK_ROOT/emulator/emulator"
 alias fdc="
 cd node_modules/react-native/scripts &&
@@ -35,8 +35,20 @@ cd node_modules/react-native/third-party/glog-0.3.5/ &&
 ../../scripts/ios-configure-glog.sh &&
 cd ../../../../"
 
-alias dc="docker-compose"
-alias dcu="docker-compose up"
-alias dcd="docker-compose down"
+alias dc="docker compose"
+alias dcb="docker compose build"
+function docker_compose_up() {
+  docker compose up -d
+}
+alias dcu=docker_compose_up
+alias dcd="docker compose down"
+alias dce="docker compose exec api"
 
 alias ngrok="~/.ngrok2/ngrok"
+
+function kill_process_on_port() {
+  lsof -t -i tcp:$1 | xargs kill
+}
+alias killport=kill_process_on_port
+
+alias recfw="(rm webpack.config.js || true) && yarn build:config && yarn build && yarn deploy:staging && yarn tail:staging"
